@@ -7,8 +7,8 @@ export function configureAuth(oidcConfigService: OidcConfigService): () => Promi
             stsServer: 'https://idsvr4.azurewebsites.net',
             redirectUrl: window.location.origin,
             postLogoutRedirectUri: window.location.origin,
-            clientId: 'please-enter-clientId',
-            scope: 'please-enter-scopes', // 'openid profile ' + your scopes
+            clientId: 'spa',
+            scope: 'openid', // 'openid profile ' + your scopes
             responseType: 'code',
             silentRenew: true,
             silentRenewUrl: window.location.origin + '/silent-renew.html',
