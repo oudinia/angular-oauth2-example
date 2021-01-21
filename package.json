@@ -1,5 +1,5 @@
 {
-  "name": "angular-codeflow-pkce",
+  "name": "angular-oauth2-pkce",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

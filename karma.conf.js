@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/angular-codeflow-pkce'),
+      dir: require('path').join(__dirname, './coverage/angular-oauth2-pkce'),
       subdir: '.',
       reporters: [
         { type: 'html' },

@@ -3,11 +3,14 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-codeflow-pkce": {
+    "angular-oauth2-pkce": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
+        },
+        "@schematics/angular:application": {
+          "strict": true
         }
       },
       "root": "",
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-codeflow-pkce",
+            "outputPath": "dist/angular-oauth2-pkce",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,13 +53,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "6kb",
-                  "maximumError": "10kb"
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -65,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-codeflow-pkce:build"
+            "browserTarget": "angular-oauth2-pkce:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-codeflow-pkce:build:production"
+              "browserTarget": "angular-oauth2-pkce:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-codeflow-pkce:build"
+            "browserTarget": "angular-oauth2-pkce:build"
           }
         },
         "test": {
@@ -113,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-codeflow-pkce:serve"
+            "devServerTarget": "angular-oauth2-pkce:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-codeflow-pkce:serve:production"
+              "devServerTarget": "angular-oauth2-pkce:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-codeflow-pkce"
+  "defaultProject": "angular-oauth2-pkce"
 }
